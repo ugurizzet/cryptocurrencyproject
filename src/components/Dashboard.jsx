@@ -4,6 +4,9 @@ import Homepage from './Homepage';
 import Navbar from './Navbar';
 import Cryptocurrencies from './Cryptocurrencies';
 import CryptoDetails from './CryptoDetails';
+import Exchanges from './Exchanges';
+import Wallet from './Wallet';
+import ProfilePage from './ProfilePage';
 
 export default function Dashboard() {
     return (
@@ -18,8 +21,17 @@ export default function Dashboard() {
             <Route exact path="/">
               <Homepage />
             </Route>
+            <Route exact path="/exchanges">
+              <Exchanges />
+            </Route>
+            <Route exact path="/wallet">
+              <Wallet />
+            </Route>
             <Route exact path="/cryptocurrencies">
               <Cryptocurrencies />
+            </Route>
+            <Route exact path="/profilePage">
+              <ProfilePage />
             </Route>
             <Route exact path="/crypto/:coinId">
               <CryptoDetails />

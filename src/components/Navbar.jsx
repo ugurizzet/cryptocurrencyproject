@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Menu, Typography, Avatar } from 'antd';
 import { Link } from 'react-router-dom';
-import { HomeOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
+import { HomeOutlined, FundOutlined, MenuOutlined, WalletOutlined, UserOutlined } from '@ant-design/icons';
 
 import icon from '../images/cryptocurrency.png';
 import { doSignOut } from '../firebase/auth';
@@ -42,6 +42,12 @@ const Navbar = () => {
         </Menu.Item>
         <Menu.Item icon={<FundOutlined />}>
           <Link to="/cryptocurrencies">Cryptocurrencies</Link>
+        </Menu.Item>
+        <Menu.Item icon={<WalletOutlined />}>
+          <Link to="/wallet">Wallet</Link>
+        </Menu.Item>
+        <Menu.Item icon={<UserOutlined />}>
+          <Link to="/profilePage">ProfilePage</Link>
         </Menu.Item>
         <Button onClick={doSignOut}>Logout</Button>
       </Menu>
